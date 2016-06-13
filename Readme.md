@@ -19,6 +19,4 @@ try to turn it into a proper game.
 
 ## Playing the game
 
-Footwork isn't hosted anywhere at the moment, but you can download the files
-and open index.html in your favourite browser if you want to give it a
-go.
+You can try the game as it is at https://davidoj.github.io
