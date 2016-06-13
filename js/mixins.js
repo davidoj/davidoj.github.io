@@ -228,7 +228,7 @@ Game.Mixins.Attacker = {
 				Game.sendMessage(this, doMessage, [target.getName()]);
 				Game.sendMessage(target, takeMessage, [this.getName()]);
 				target.takeDamage(damage);
-				if (target.hasMixin('Balanced') {
+				if (target.hasMixin('Balanced')) {
 					target.reduceBalance(bal_damage);
 				}
 				hit = true;
