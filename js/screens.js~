@@ -1,0 +1,103 @@
+
+
+Game.Screen = {};
+
+Game.Screen.footworkScreen =  {
+	_map:  null,
+	_player: null,
+
+	_generateMap: function() {
+		var generator = new ROT.Map.Arena(80, 24);
+		var map = [];
+		var mapWidth = 80;
+		var mapHeight = 24;
+
+		for (var x = 0; x < mapWidth; x++) {
+            map.push([]);
+            for (var y = 0; y < mapHeight; y++) {
+                map[x].push(Game.Tile.nullTile);
+            }
+        }
+	
+
+		var mapCallback = function (x,y,value) {
+			if (value === 1) {
+				map[x][y] = Game.Tile.wallTile;
+			}
+			else {
+				map[x][y] = Game.Tile.floorTile;
+			}
+		}
+
+		generator.create(mapCallback);
+		this._map = new Game.Map(map, this._player);
+
+	},
+
+	
+	enter: function() { 
+		console.log("entered game screen");
+		if (this._player === null) {
+			this._player = new Game.Entity(Game.PlayerTemplate);
+		}
+
+		if (this._map === null) {
+			this._generateMap();
+		}
+
+		this._map.getEngine().start()
+	},
+	
+	exit: function() { 
+		console.log("exited game screen"); 
+	},
+
+
+	render: function(display) {
+		for (var x = 0; x<this._map.getWidth(); x++) {
+			for (var y = 0; y<this._map.getHeight(); y++) {
+				var tile = this._map.getTile(x,y);
+				display.draw(x, y,
+							 tile.getChar(),
+							 tile.getForeground(),
+							 tile.getBackground());
+			}
+		}
+		var entities = this._map.getEntities();
+
+		for (var i = 0; i<entities.length; i++) {
+			var entity = entities[i];
+			display.draw(entity.getX(), entity.getY(),
+						 entity.getChar(), 
+						 entity.getForeground(),
+						 entity.getBackground());
+		}
+	},
+
+	handleInput: function(inputType, inputData) {
+		if (inputType == 'keydown') {
+			if (inputData.keyCode == ROT.VK_A) {
+				this._player.tryMove(-1,0,this._map);
+			} else if (inputData.keyCode == ROT.VK_S) {
+				this._player.tryMove(0,1,this._map);
+			} else if (inputData.keyCode == ROT.VK_W) {
+				this._player.tryMove(0,-1,this._map);
+			} else if (inputData.keyCode == ROT.VK_D) {
+				this._player.tryMove(1,0,this._map);
+			}
+			this._map.getEngine().unlock();
+		}
+
+		if (inputType == 'mousemove') {
+			var pos = Game.getDisplay().eventToPosition(inputData);
+			if (pos[0] >= 0 && pos[1] >= 0) {
+				this._player.turn(pos[0]-this._player.getX(),pos[1]-this._player.getY());
+			}			
+		}
+
+		if (inputType == 'mousedown') {
+			
+
+	},
+
+}

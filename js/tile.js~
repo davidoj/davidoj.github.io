@@ -1,0 +1,21 @@
+
+
+Game.Tile = function(glyph, walkable) {
+	this._glyph = glyph;
+	this._walkable = walkable;
+}
+
+Game.Tile.prototype.getGlyph = function() {
+	return this._glyph;
+}
+
+Game.Tile.prototype.getWalk = function() {
+	return this._walkable;
+}
+
+
+Game.Tile.nullTile = new Game.Tile(new Game.Glyph(), false);
+
+Game.Tile.floorTile = new Game.Tile(new Game.Glyph('.'), true);
+
+Game.Tile.wallTile = new Game.Tile(new Game.Glyph('#'), true);

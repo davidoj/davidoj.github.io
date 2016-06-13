@@ -1,0 +1,16 @@
+
+// Strictly positive modulus
+function mod(n, m) {
+        return ((n % m) + m) % m;
+}
+
+// Get an "eighthian" direction from a vector
+function c2d(x,y) {
+	return mod(Math.round(4*Math.atan2(y,x)/Math.PI),8);
+}
+
+
+// Get a unit vector from a direction
+function d2v(direction) {
+	
+}

@@ -1,0 +1,22 @@
+
+Game.ControlKeys = {
+		if (inputData.keyCode == ROT.VK_X) {
+				this._player.tryMove(-1,0,this._map);
+			} else if (inputData.keyCode == ROT.VK_Z) {
+				this._player.tryMove(-1,-1,this._map);
+			} else if (inputData.keyCode == ROT.VK_Q) {
+				this._player.tryMove(1,-1,this._map);
+			} else if (inputData.keyCode == ROT.VK_C) {
+				this._player.tryMove(-1,1,this._map);
+			} else if (inputData.keyCode == ROT.VK_D) {
+				this._player.tryMove(0,1,this._map);
+			} else if (inputData.keyCode == ROT.VK_E) {
+				this._player.tryMove(1,1,this._map);
+			} else if (inputData.keyCode == ROT.VK_S) {
+				this._player.tryMove(0,0,this._map);
+			} else if (inputData.keyCode == ROT.VK_A) {
+				this._player.tryMove(0,-1,this._map);
+			} else if (inputData.keyCode == ROT.VK_W) {
+				this._player.tryMove(1,0,this._map);
+		}
+}

@@ -1,0 +1,12 @@
+# Footwork
+
+Footwork is a JavaScript roguelike (or, it will be). At present, it's
+intended to be pretty traditional with ASCII graphics, lots of
+commands and so forth, with the exception that it will have FPS-like
+controls (mouse controls direction, keys control walking) and a combat
+system inspired by Sil and Dark Souls. Which probably makes it not
+that traditional at all, really.
+
+It's not hosted anywhere at the moment, but you can download the files
+and open index.html in your favourite browser if you want to give it a
+go.

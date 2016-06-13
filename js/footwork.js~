@@ -1,0 +1,23 @@
+/* Footwork game. David Johnston 2016 */
+
+
+
+var Game = {
+	display: null,
+
+	init: function() {
+
+		// Check if rot.js can work on this browser
+		if (!ROT.isSupported()) {
+			alert("The rot.js library isn't supported by your browser.");
+		} else {
+			// Good to go!
+		}
+
+
+		this.display = new ROT.Display();
+		document.body.appendChild(this.display.getContainer());
+	}
+
+
+}
