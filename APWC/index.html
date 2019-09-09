@@ -45,7 +45,7 @@
 	}).addTo(map);
 
 	function onEachFeature(feature, layer) {
-		var popupContent = "<p>" +feature.properties.name + "</p><p>" + feature.properties.notes +  "</p><p>" +  feature.properties.link + "</p>";
+		var popupContent = "<p>" +feature.properties.name + "</p><p>" + feature.properties.street_address + "</p><p>" + feature.properties.name +  "</p><p>" +  feature.properties.link + "</p>";
 
 		layer.bindPopup(popupContent);
 	}
