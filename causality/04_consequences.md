@@ -1,3 +1,6 @@
 # Forget about effects, think about consequences
 
 WIP
+
+
+<!-- It can be much easier to understand purposeful things like lights than to understand natural things like rocks. CSDT treats causal models as purposeful things, made to provide us *informed estimates of the consequences of our actions*. This is opposed to the more common approach of researchers in the field of causal inference to treat causal relationships as natural things, that must be carefully studied and characterised like rocks. In this way, CSDT takes inspiration from Hume's proposal that causal relationships really reside *inside our heads*, and not in nature. While this view of causal models  is endorsed by [Dawid](https://arxiv.org/abs/2004.12493), it is not yet accepted by most researchers in the field of causality. It isn't straightforward to get from informed consequence estimates to causal relationships, and before I explain how this can be done I will explain the two ways that people currently explain causal relationships: *interventional models* and *counterfactuals*. -->
