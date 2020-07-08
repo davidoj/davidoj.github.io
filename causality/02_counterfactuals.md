@@ -1,37 +1,18 @@
-# A first answer: counterfactuals and closest worlds
+# Counterfactuals and closest worlds
 
-WIP
+A recap of [chapter 1](/causality/01_three_questions): 
 
-This is the second in a series of articles where I explain a new approach to causal inference I have been working on called causal statistical decision theory or CSDT for short.
-In Part 1 I introduced two important questions about causation:
-    • What do we mean when we say something causes something else?
-    • How do we learn that something causes something else?
-Hume proposed that when we say “X causes Y” we mean that X happening is associated with Y happening and we have inside our heads a model in which X happening is connected to Y happening. Furthermore, we learn that X causes Y by observing X being associated with Y, assuming that this association will continue in the future, and deciding there is a connection between the two due to mental habit. This isn’t a completely satisfying explanation: the difference between an association and a causal relationship is still mysterious, as is how we can learn that X and Y are not merely associated but actually causally related.
-Modern theories of causality try to explain what that “something extra” is that makes a causal relationship. They also provide mental images to help us think about causal relationships. While the mental images don’t explain causality themselves, they are very influential independently of the underlying explanations.
-Modern theories of causation provide ways to think about causation as well as partial definitions of causation. The “ways to think” about causation are often useful when we want to make some assumptions and There are two main ways that we can think about causation, and two main ways that have been proposed to define causation. The different ways to think about causation – as a relationship between possible worlds and as an arrow – are not strictly distinct. It’s often possible to think about causation in both ways. Nonetheless, there are theories of causality that lend themselves more readily to one than the other.
-On the other hand, the underlying definitions of causation – in terms of similarity between worlds or in terms of ideal interventions – are distinct, although the distinction is rarely relevant to practical investigations.
+Three key questions about causes and effects are:
+ 1. What does it mean to say something causes something else?
+ 2. How do we learn that something causes something else?
+ 3. What is the purpose of learning that something causes something else?
 
+We established that if one thing causes another then we should observe that these two things are associated, and that observing associations might be part of the process of learning causal relationships. We also established that there was *something else* to causal relationships beyond association (which Hume called a "necessary connection"), but we couldn't say much about what it was. Finally, learning causes and effects is useful to help us choose which actions to take, and to work out who (or what) to blame for outcomes.
 
-How do we think about causation?
+A major focus of philosophical work on causality is on describing precisely down the *something else* that separates causal relationships from associations is. There are two major theories that claim to solve this problem: *closest world counterfactuals* and *ideal interventions*. Both fall short of providing a fully satisfying answer to the question; counterfactuals leave key elements unexplained, and ideal interventions provide a circular explanation of causality. "Practical" theories of causality - meaning those that are invoked when people actually try to infer causal effects from data - tend not to stress the foundations and many practitioners take them for granted entirely. Practical theories provide ways of thinking about causality that have proven to be very useful, even if it's not ultimately clear quite when these ways of thinking are and aren't justified.
 
+In this chapter, I will briefly discuss counterfactuals, and in [the next I address ideal interventions](/causality/03_interventions).
 
-Causation is a relationship between possible worlds
-Causation is an arrow
-How do we define causation?
-Similarity between worlds
-[Potential Outcomes](https://amstat.tandfonline.com/doi/abs/10.1198/016214504000001880?casa_token=ZcGSu3nFqgkAAAAA:iyOdd8_gMZ-bwC2oFYMREMxzW8amOFiKW7n8tVNQBDBsFkXgsuGLzwoZXhgtzU-QTTIc6niudEaOOQ#.XuMSuZYRXJU)
-[Event C causes event E if and only if there is a chain of dependencies running from C to E. (Lewis, 2000)](https://www.jstor.org/stable/2678389?casa_token=QOPVnOHOPEgAAAAA%3ALEODObYoZ6jGkMBtmF7v61lERsPXtMIeqQDtpVE08cYjSkF9tuVUBbFgHCbDXQTMExs0KP3wXrH63OTJEQLzPHfLtbVkeSYexYwAX_8YkphgV4Oy6c86&seq=1#metadata_info_tab_contents)
-
-Ideal interventions
-[Single World Intervention Graphs](https://www.csss.washington.edu/files/working-papers/2013/wp128.pdf)
-[Causal Bayesian Networks](http://bayes.cs.ucla.edu/BOOK-2K/ch1-3.pdf)
-
-How do we think about causation?
-Causation is an arrow
-It is very simple to observe that we can represent causal statements with arrows. For example, “rain causes the footpath to be wet” could be represented by the diagram:
-Drawing causal sentences as diagrams can be quite helpful in thinking about how multiple causal relationships operate together. For example, “rain causes the footpath to be wet and water on the footpath causes it to be slippery” could be drawn like this:
-This diagram tells us two more things: first, rain usually makes footpaths slippery. Secondly, if we can prevent the footpath from becoming wet, it won’t become slippery even if it does rain. We can conclude these facts from the sentence as well, but once you learn how to read graphs like this it is easier to do so from the graph, especially when the number of causal relationships grows large.
-Note that “causes are arrows” can help to determine the consequences of some causal relationships that you already know, but on its own it cannot help you work out if there is or isn’t a causal relationship if you’re unsure in the first place.
 Causation is a relationship between possible worlds
 Instead of taking causal relationships as a basic fact – as we do when we represent causal relationships with arrows – we can think of causal relationships as expressing counterfactual relationships. There’s a lot to say about counterfactual relationships, and I’m going to try to get away with saying just a little.
 The key idea in counterfactuals is that there are multiple ways an event could play out. Imagine you are in the middle of cooking spaghetti bolognese and have a sliced chili in your hand, ready to add to the pot. From here, imagine two different paths the future could take:
