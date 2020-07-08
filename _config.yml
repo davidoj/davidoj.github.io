@@ -22,7 +22,7 @@ title: Seeing and Doing
 email: david.johnston1@anu.edu.au
 description: >- # this means to ignore newlines until "baseurl:"
   A blog about the foundations of causal inference
-baseurl: /causality # the subpath of your site, e.g. /blog
+baseurl: #/causality # the subpath of your site, e.g. /blog
 url: https://davidoj.github.io # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  davidoj
