@@ -1,5 +1,7 @@
 # A second answer: ideal interventions
 
+WIP
+
 The “comparison between possible worlds” approach to causality invites you to imagine two worlds that are as similar as possible, except in one world (for example) the bolognese had chili in it and in the other it didn’t. A rather different way of defining causal effects is to say that “chili causes bolognese to be hot” means “if I add chili to bolognese, it will become hot”.
 This is, to me, much more intuitive than the counterfactual account. Instead of trying to understand the unusual idea of “most similar possible worlds”, I can instead think about what I expect to be the consequences of my actions — which is already something that I do all the time. On the other hand, it makes causation depend on my own actions. Does “wind causes flags to flutter” mean “if I create the wind, flags will flutter”? It seems to me that wind causes flags to flutter whether or not there is anybody creating said wind.
 The counterfactual theory uses the idea of parallel worlds to guide our intuition, but employs the concept of “minimally different worlds” to provide a strict definition of causal relationships. Similarly, while the notion of taking an action can give us a general idea of the interventional theory, a more thorough definition depends on the idea of ideal interventions. If, while adding chili to my bolognese, I also throw in a squirt of dish detergent, it would be wrong to say that the chili was the cause of its frothy appearance. Ideal interventions are interventions that don’t have such side-effects.

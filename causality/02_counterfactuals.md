@@ -1,5 +1,7 @@
 # A first answer: counterfactuals and closest worlds
 
+WIP
+
 This is the second in a series of articles where I explain a new approach to causal inference I have been working on called causal statistical decision theory or CSDT for short.
 In Part 1 I introduced two important questions about causation:
     • What do we mean when we say something causes something else?
