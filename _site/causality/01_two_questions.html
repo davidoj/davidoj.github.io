@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Two key questions about causality | Seeing and Doing</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="Two key questions about causality" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A blog about the foundations of causal inference" />
+<meta property="og:description" content="A blog about the foundations of causal inference" />
+<link rel="canonical" href="http://localhost:4000/causality/causality/01_two_questions.html" />
+<meta property="og:url" content="http://localhost:4000/causality/causality/01_two_questions.html" />
+<meta property="og:site_name" content="Seeing and Doing" />
+<script type="application/ld+json">
+{"@type":"WebPage","headline":"Two key questions about causality","url":"http://localhost:4000/causality/causality/01_two_questions.html","description":"A blog about the foundations of causal inference","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link rel="stylesheet" href="/causality/assets/css/style.css?v=6cc86f88ad1c518c5445d4559297d5ba2f47b434">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Seeing and Doing</h1>
+      <h2 class="project-tagline">A blog about the foundations of causal inference</h2>
+      
+        <a href="https://github.com/davidoj/davidoj.github.io" class="btn">View on GitHub</a>
+      
+      
+    </section>
+
+    <section class="main-content">
+      <h1 id="two-key-questions-about-causality">Two key questions about causality</h1>
+<p>People have been trying for a long time to explain how it is that we learn causal relationships. While we have multiple modern theories that are used practically to justify causal relationships, these theories are hampered by the vagueness of their underpinning principles. I have developed a new approach to causality called <em>Causal Statistical Decision Theory</em> (CSDT) that is explicit about its underlying principles and extends our understanding of causal inference with implications of theoretical and practical significance. This is the first in a series of posts introducing CSDT.</p>
+
+<p>Some of the key questions about causation we have to day have been asked by philosophers for a very long time. Aristotle in 350 BC had a great deal to say about what it means when one thing causes another, and no doubt he was not the first to do so. I’m going to skip most of the history of though about causality to start with a discussion of the 18th century Scottish philosopher David Hume. Along with the classical question of what it means for something to cause something else, Hume introduced the question that is still the big question of causal inference today:  <em>How do we learn that something causes something else?</em> Hume is also responsible for helping us understand that <em>this is a really difficult question to answer</em>. His proposed answers to the question leave a bit to be desired, but he’s worth talking about because he was the first person to be seriously asking the right question.</p>
+
+<p>Don’t treat this as an authoritative analysis of Hume’s views. Firstly, I don’t know enough about his views to write such a work. Secondly, I am really writing about CSDT, so I have plastered over many key issues and avoided careful definitions of his terms. It is a Hume-flavoured introduction to causality, not an analysis of Hume.</p>
+
+<h2 id="examples-of-causes-and-effects-vs-a-theory-of-causality">Examples of causes and effects vs a theory of causality</h2>
+<p>Causal relationships obviously exist. We can all agree on many examples of causes and effects: wind makes flags flutter, rain makes the ground wet, watching sad movies makes me cry, chili makes food hot. While many people can be collectively wrong about things sometimes (COVID-19 did grow into a pandemic after all), I am very confident - and I imagine you are equally confident - that these causes and effects I just listed are <em>true</em>. I can’t imagine being persuaded by anybody that wind doesn’t actually make flags flutter. Even though I’m confident that wind makes flags flutter, I have a hard time explaining how I came to this conclusion. I know that it can’t simply be because I’ve seen many flags fluttering on windy days. I also doubt that it is a result of my understanding of physics — as far as non-professionals go, I think I’m no slouch when it comes to physics, but I could easily imagine being convinced that my understanding of wind-flag interaction was wrong. Nonetheless, I am sure that wind makes flags flutter.</p>
+
+<p>Aristotle, apparently, felt so sure of his knowledge of causes and effects that he believed <a href="https://plato.stanford.edu/entries/hume/#Cau">causal relationships could be logically deduced</a>, that they are more like mathematical facts than things may learn about the world. According to this view, we could imagine deriving the tendency of wind to make flags flutter from pure mathematics. Unfortunately, I’m pretty sure this is impossible, and I definitely haven’t managed to do it myself. Aristotle’s view was, apparently, largely accepted for about 2000 years until it was challenged by Hume (<a href="https://plato.stanford.edu/entries/hume/#Cau">same link</a>) who argued that we must learn about causal relationships from experience. Like me, Hume doubted that we could derive causal relationships from reason alone: pure mathematics can’t tell me that wind makes flags flutter, nor that eating chili would make my mouth feel hot.</p>
+
+<p>The fact that causes and effects must be learned raises the original question of how they are learned. In order to answer this question, we also need to know what exactly we mean when we talk about causes and effects. A tempting — but wrong — definition of causation is via association: “wind makes flags flutter” could mean “when the wind blows, flags will flutter”. But this definition is well known to be lacking: when my calendar says it’s September, the wind blows more. However, the reading of my calendar obviously doesn’t cause the wind to blow. On the other hand, association does seem to play a role — I can’t think of two things that I believe are causes and effects but where I expect the effect to happen completely at random with no respect for whether the cause has happened or not.</p>
+
+<p>The fact that associations are an ingredient in causal relationships suggests that part of how we learn about causes and effects is from observing causes and effects happening together. However, there also needs to be something else that allows us to conclude that we’re not just seeing an association between wind and fluttering, but that the wind actually causes the fluttering. Hume’s proposal (as I understand it) was that causal relationships consist of two elements: firstly, we have the fact that one thing usually follows the other, and secondly we have an idea that there is a connection between the two things happening. That is, he says the association is something that really happens “out there in the world”, but the causal connection is part of our mental model of the world. Furthermore, the fact that we decide that some things don’t just happen together but are causally connected is a “mental habit”, not derived from any indication that the cause and effect actually have any connection. This last proposition is not really accepted today; most people think there is something special about causal relationships that distinguishes them from mere associations. Even if our tendency to regard things as causally connected is merely a “mental habit”, it’s useful mental habit, and it wouldn’t be useful if we were inclined to regard calendars and wind as causally connected. So the notion that causes are “inside our heads” still leaves open the question of when it would be useful to think that one thing causes another.</p>
+
+<p>Despite this shortcoming, I think there is something we gain from considering causal relationships to be things that live in mental models rather than things that live “in nature”. Mental models, unlike natural phenomena, often have identifiable purposes. For example, we often use our knowledge of causes and effects to work out what consequences our actions might have (“what will happen to that flag if I blow a fan at it?”), as well as to work out whose fault something was (“who should I blame for making my dinner so hot?”). There is a difference between studying something with a purpose and something with no purpose. Consider the following two questions:</p>
+<ol>
+  <li>What makes a light a light?</li>
+  <li>What makes a rock a rock?
+The first question seems to me a lot easier than the second. A light is something that emits light - it could be a burning wick, an LED or a convenient full moon. If it fulfils the purpose - illumination - then it is a light. There’s no comparably simple way to check if something is a rock. Is it hard and heavy? It could be a rock - or it could be one of many other hard, heavy things that are not rocks. Is it a <a href="https://en.wikipedia.org/wiki/Rock_(geology)">naturally occurring solid mass or aggregate of minerals or mineraloid matter</a>? How do I check if it is a mass of minerals, then? Do I need to check if it is made of sub-components that have a regular atomic structure? That seems like a lot of work. Furthermore, should I really exclude anything <a href="https://en.wikipedia.org/wiki/Synroc">manmade</a>?</li>
+</ol>
+
+<p>It can be much easier to understand purposeful things like lights than to understand natural things like rocks. CSDT treats causal models as purposeful things, made to provide us <em>informed estimates of the consequences of our actions</em>. This is opposed to the more common approach of researchers in the field of causal inference to treat causal relationships as natural things, that must be carefully studied and characterised like rocks. In this way, CSDT takes inspiration from Hume’s proposal that causal relationships really reside <em>inside our heads</em>, and not in nature. While this view of causal models  is endorsed by <a href="https://arxiv.org/abs/2004.12493">Dawid</a>, it is not yet accepted by most researchers in the field of causality. It isn’t straightforward to get from informed consequence estimates to causal relationships, and before I explain how this can be done I will explain the two ways that people currently explain causal relationships: <em>interventional models</em> and <em>counterfactuals</em>.</p>
+
+
+      <footer class="site-footer">
+        
+          <span class="site-footer-owner"><a href="https://github.com/davidoj/davidoj.github.io">davidoj.github.io</a> is maintained by <a href="https://github.com/davidoj">davidoj</a>.</span>
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </section>
+
+    
+  </body>
+</html>
