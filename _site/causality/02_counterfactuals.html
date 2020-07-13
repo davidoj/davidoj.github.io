@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
 
 <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>A first answer: counterfactuals and closest worlds | Seeing and Doing</title>
+<title>Counterfactuals and closest worlds | Seeing and Doing</title>
 <meta name="generator" content="Jekyll v3.8.7" />
-<meta property="og:title" content="A first answer: counterfactuals and closest worlds" />
+<meta property="og:title" content="Counterfactuals and closest worlds" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="A blog about the foundations of causal inference" />
 <meta property="og:description" content="A blog about the foundations of causal inference" />
-<link rel="canonical" href="http://localhost:4000/causality/02_counterfactuals.html" />
-<meta property="og:url" content="http://localhost:4000/causality/02_counterfactuals.html" />
+<link rel="canonical" href="https://davidoj.github.io/causality/02_counterfactuals.html" />
+<meta property="og:url" content="https://davidoj.github.io/causality/02_counterfactuals.html" />
 <meta property="og:site_name" content="Seeing and Doing" />
 <script type="application/ld+json">
-{"@type":"WebPage","headline":"A first answer: counterfactuals and closest worlds","url":"http://localhost:4000/causality/02_counterfactuals.html","description":"A blog about the foundations of causal inference","@context":"https://schema.org"}</script>
+{"@type":"WebPage","headline":"Counterfactuals and closest worlds","url":"https://davidoj.github.io/causality/02_counterfactuals.html","description":"A blog about the foundations of causal inference","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
-    <link rel="stylesheet" href="/assets/css/style.css?v=154cb0be98089119302c0ce7a320f47a2b41c635">
+    <link rel="stylesheet" href="/assets/css/style.css?v=c0eea3e51c455c733e76924233cb5d181d756cbe">
   </head>
   <body>
     <section class="page-header">
@@ -32,50 +32,37 @@
     </section>
 
     <section class="main-content">
-      <h1 id="a-first-answer-counterfactuals-and-closest-worlds">A first answer: counterfactuals and closest worlds</h1>
+      <h1 id="counterfactuals-and-closest-worlds">Counterfactuals and closest worlds</h1>
 
-<p>This is the second in a series of articles where I explain a new approach to causal inference I have been working on called causal statistical decision theory or CSDT for short.
-In Part 1 I introduced two important questions about causation:
-    • What do we mean when we say something causes something else?
-    • How do we learn that something causes something else?
-Hume proposed that when we say “X causes Y” we mean that X happening is associated with Y happening and we have inside our heads a model in which X happening is connected to Y happening. Furthermore, we learn that X causes Y by observing X being associated with Y, assuming that this association will continue in the future, and deciding there is a connection between the two due to mental habit. This isn’t a completely satisfying explanation: the difference between an association and a causal relationship is still mysterious, as is how we can learn that X and Y are not merely associated but actually causally related.
-Modern theories of causality try to explain what that “something extra” is that makes a causal relationship. They also provide mental images to help us think about causal relationships. While the mental images don’t explain causality themselves, they are very influential independently of the underlying explanations.
-Modern theories of causation provide ways to think about causation as well as partial definitions of causation. The “ways to think” about causation are often useful when we want to make some assumptions and There are two main ways that we can think about causation, and two main ways that have been proposed to define causation. The different ways to think about causation – as a relationship between possible worlds and as an arrow – are not strictly distinct. It’s often possible to think about causation in both ways. Nonetheless, there are theories of causality that lend themselves more readily to one than the other.
-On the other hand, the underlying definitions of causation – in terms of similarity between worlds or in terms of ideal interventions – are distinct, although the distinction is rarely relevant to practical investigations.</p>
+<p>A recap of <a href="/causality/01_three_questions">chapter 1</a>:</p>
 
-<p>How do we think about causation?</p>
+<p>Three key questions about causes and effects are:</p>
+<ol>
+  <li>What does it mean to say something causes something else?</li>
+  <li>How do we learn that something causes something else?</li>
+  <li>What is the purpose of learning that something causes something else?</li>
+</ol>
 
-<p>Causation is a relationship between possible worlds
-Causation is an arrow
-How do we define causation?
-Similarity between worlds
-<a href="https://amstat.tandfonline.com/doi/abs/10.1198/016214504000001880?casa_token=ZcGSu3nFqgkAAAAA:iyOdd8_gMZ-bwC2oFYMREMxzW8amOFiKW7n8tVNQBDBsFkXgsuGLzwoZXhgtzU-QTTIc6niudEaOOQ#.XuMSuZYRXJU">Potential Outcomes</a>
-<a href="https://www.jstor.org/stable/2678389?casa_token=QOPVnOHOPEgAAAAA%3ALEODObYoZ6jGkMBtmF7v61lERsPXtMIeqQDtpVE08cYjSkF9tuVUBbFgHCbDXQTMExs0KP3wXrH63OTJEQLzPHfLtbVkeSYexYwAX_8YkphgV4Oy6c86&amp;seq=1#metadata_info_tab_contents">Event C causes event E if and only if there is a chain of dependencies running from C to E. (Lewis, 2000)</a></p>
+<p>We established that if one thing causes another then we should observe that these two things are associated, and that observing associations is part of the process of learning causal relationships. We also established that there is <em>something else</em> to causal relationships beyond association (which Hume called a “necessary connection”), but we didn’t say much about what it was. Finally, we discussed some possible reasons why we learn causal relationships over an above just learning association rules.</p>
 
-<p>Ideal interventions
-<a href="https://www.csss.washington.edu/files/working-papers/2013/wp128.pdf">Single World Intervention Graphs</a>
-<a href="http://bayes.cs.ucla.edu/BOOK-2K/ch1-3.pdf">Causal Bayesian Networks</a></p>
+<p>Contemporary work on causality is carried out by philosophers and practitioners (statisticians, econometricians, epidemiologists and so on). While it isn’t a hard rule, philosophical work is more concerned with explaining what it means to say something causes something else, and practical work is more concerned with the question of how we can learn that something causes something else. Along with formal accounts of what causes are or when you can learn them, theories of causation often also provide tools to reason more explicitly using our informal understanding of causality. I think the counterfactual theory of causation, which I discuss here, should really be understood to have two versions, one which is attempting to be a formal account of causation and another which attempts to help us leverage our informal understanding of causality.</p>
 
-<p>How do we think about causation?
-Causation is an arrow
-It is very simple to observe that we can represent causal statements with arrows. For example, “rain causes the footpath to be wet” could be represented by the diagram:
-Drawing causal sentences as diagrams can be quite helpful in thinking about how multiple causal relationships operate together. For example, “rain causes the footpath to be wet and water on the footpath causes it to be slippery” could be drawn like this:
-This diagram tells us two more things: first, rain usually makes footpaths slippery. Secondly, if we can prevent the footpath from becoming wet, it won’t become slippery even if it does rain. We can conclude these facts from the sentence as well, but once you learn how to read graphs like this it is easier to do so from the graph, especially when the number of causal relationships grows large.
-Note that “causes are arrows” can help to determine the consequences of some causal relationships that you already know, but on its own it cannot help you work out if there is or isn’t a causal relationship if you’re unsure in the first place.
-Causation is a relationship between possible worlds
-Instead of taking causal relationships as a basic fact – as we do when we represent causal relationships with arrows – we can think of causal relationships as expressing counterfactual relationships. There’s a lot to say about counterfactual relationships, and I’m going to try to get away with saying just a little.
-The key idea in counterfactuals is that there are multiple ways an event could play out. Imagine you are in the middle of cooking spaghetti bolognese and have a sliced chili in your hand, ready to add to the pot. From here, imagine two different paths the future could take:
+<p>The counterfactual theory of causality is that A) causal relationships express counterfactual dependence and B) we can determine counterfactual dependence by examining <em>possible worlds</em>. There is a lot to be said to adequately explain both A) and B), and I’m going to try to get away with saying just a little.</p>
+
+<p>The key idea behind counterfactual dependence is that there are multiple ways an event “could” play out, given different initial conditions. Imagine you are in the middle of cooking spaghetti bolognese and have a sliced chili in your hand, ready to add to the pot. From here, imagine two different paths the future could take:
     1. You tip your hand and add the chili to the pot
-    2. You set the chili aside
-Clearly, in world 1 you would expect that your bolognese would be hot, while in world 2, provided you hadn’t added any other hot ingredients, your bolognese would not be hot. This comparison of “possible worlds” is the basic feature of counterfactual analysis. On the basis of this comparison, we can define the sentence “chili caused the bolognese to be hot” to mean that the bolognese is hot in world 1 but not hot in world 2, and similarly define all other causal relationships in terms of the comparison between different “possible worlds”.
-The counterfactual way of thinking can be useful if we are wondering whether two things are causally related – for example, if we want to ask “does the measles vaccine protect against measles?”, we can imagine two worlds - one in which everyone going to the doctor for a vaccine receives it as usual, and another where all the same people go to see their doctor, but all the vaccines were surreptitiously switched for some inert placebo. Imagine that we then compare which individuals contract measles in both worlds. If, for example, the same individuals in both worlds contract measles, we could conclude that the vaccines did not offer resistance. On the other hand, if some individuals contract measles in the placebo world but the same individuals do not contract it in the vaccination world, we can conclude that the vaccination protected them from measles.
-On this overview, the counterfactual way of thinking appears to be suited to developing a recipe for asking whether a causal effect is present, while the “causes are arrows” way of thinking is suited to thinking about the consequences of a set of causal relationships we already know to exist. In fact, we find that David Lewis takes a view very much like this one (<a href="https://www.jstor.org/stable/2678389?casa_token=QOPVnOHOPEgAAAAA%3ALEODObYoZ6jGkMBtmF7v61lERsPXtMIeqQDtpVE08cYjSkF9tuVUBbFgHCbDXQTMExs0KP3wXrH63OTJEQLzPHfLtbVkeSYexYwAX_8YkphgV4Oy6c86&amp;seq=1#metadata_info_tab_contents">Event C causes event E if and only if there is a chain of dependencies running from C to E. (Lewis, 2000)</a>). 
-There is a complication, however. While it can be quite useful to imagine multiple worlds in the counterfactual style, “what happens in your imagination” is hardly a rigorous definition of a causal relationship. On this basis I could argue that chili doesn’t cause food to be hot, because that’s what I imagine, and someone else could argue that it does, because that’s what they imagine, and no-one could fault the reasoning of either of us. Just as with “arrows are causes” reasoning, we are in need of a more rigorous definition of counterfactuals.
-How do we define causality?
-Similarity between worlds
-The reason why, in the counterfactual approach, we think of “two parallel worlds” with some small difference between them (e.g. chili in the bolognese, or vaccines vs placebo) is that we want think about changing only the cause we are investigating while keeping everything else as close to the same as possible. To investigate the efficacy of measles vaccines, instead of two parallel worlds, I could imagine something more mundane like dividing a collection of people into two groups, one to receive placebos and another to receive actual vaccines. However, if I do this then there will be many differences between both groups: different people will have different hygiene practices, will come into contact with different social groups and will be exposed to different diseases in different ways. Differences between the two groups could be attributed to something other than the vaccine. What our “parallel worlds” imaginary experiment allows us to do is set up a situation where any differences between the two worlds must be attributable to the vaccine.
-It is clear, however, that the vaccine or placebo cannot be the only difference between the two worlds in our experiment. If the vaccine is effective, then they will also differ in terms of who gets measles! For this reason, philosopher David Lewis has proposed that “miminal changes” are the basis of counterfactuals: the two worlds we want to compare are the world in which people are not vaccinated (call it “World V”) and the world (“World P”) that is as similar as possible to World V with the condition that in World P everyone received a placebo instead of a vaccine.
-Explaining counterfactuals in terms of the “most similar worlds” is a step towards a definition. It turns out to be rather difficult to strictly define “most similar”, however, and most proposals have serious flaws. The issues are somewhat nuanced, and I will avoid delving into them for the sake of brevity. I have never seen an analysis of “most similar worlds” informing the basis of causal assumptions made in any practical work, and I think I am not being particuarly controversial to claim that an adequate means of measuring of world similarity has not been found.</p>
+    2. You pause for a second, and then decide to set the chili aside
+Clearly, in world 1 you would expect that your bolognese would be hot, while in world 2 your bolognese would not be hot. By comparing the “chili world”, where the bolognese is hot, with the “no chili world”, where it is not, we can conclude that the bolognese being hot <em>counterfactually depends</em> on whether or not we put chili into the pot. This comparison of “possible worlds” is the basic feature of counterfactual analysis. Having established counterfactual dependence (B), we can then say (A) because the bolognese being hot counterfactually depends on the addition of chili, the addition of chili caused the bolognese to be hot (…with some caveats, if you dig deeply into the question).</p>
+
+<p>What I have described is the counterfactual <em>way of thinking</em>, a way to leverage informal knowledge I have about bolognese and chili to establish a causal relationship. The counterfactual way of thinking can also be useful for discovering causal relationships that I’m not yet sure of. For example, if I want to find out “does the measles vaccine protect against measles?”, I can imagine two worlds - one in which everyone going to the doctor for a vaccine receives it as usual, and another where all the same people go to see their doctor, but all the vaccines were surreptitiously switched for an inert placebo. On the basis of the counterfactual theory I can then say that if the same individuals in both worlds contract measles, I can conclude that the vaccines did not offer protection. On the other hand, if some individuals contract measles in the placebo world but the same individuals do not contract it in the vaccination world, I could conclude that the vaccination protected those individuals from measles. Now, I clearly can’t actually conjure up these two simultaneous parallel worlds, but maybe I can still learn some things about what would have happened in each if in the real world I surreptitiously switch some vaccines for placebos but not others.</p>
+
+<p>While this is a useful way of thinking about causal relationships, when we pursue this idea a little more we run into a similar problem to our original problem with saying what causation is. We have established that we have <em>really strong</em> intuitions about some things causing other things, and it is easy to explain the same causal claim using different synonyms, but it is hard to explain a causal claim using only more basic ideas. The tough question for the counterfactual way of thinking is <em>what actually happens in all these parallel worlds?</em> Just like with causal relationships, I have an overwhelming intuition that the world where I put chili in the pot will have hot bolognese in it and the world where I didn’t will have not-hot bolognese. But why? I can easily say “because chili makes bolognese hot”, but then I’m just back to giving synonyms for causation.</p>
+
+<p>David Lewis has proposed that we can escape falling back on our intuitions about causality by <a href="https://plato.stanford.edu/entries/causation-counterfactual/">considering how <em>similar</em> these worlds are</a>, subject to the constraint that in one world there is chili in the pot and in the other there is not. He defines a multi-faceted notion of similarity, which considers issues of “how the worlds are arranged” (for example, worlds 1 and 2 will be more similar if the sauce is boiling in both than if it is boiling in one and frozen in the other) as well as “how physics operates” (for example, worlds 1 and 2 will be more similar if chili tastes hot in both than if it tastes hot in one world but not in the other). Equipped with such a notion of similarity, we can then answer the question of “what happens in world 2?” by noting that it is whatever happens in the world most similar to world 1, except with no chili in the bolognese pot.</p>
+
+<p>If it is possible to come up with a measure of the similarity of worlds along these lines that reproduces all of our strong causal intuitions, I think this would be a very serious candidate for explaining how we learn causal relationships - namely, by employing some approximation of this similarity measure in combination with our ongoing experience of the real world. As far as I understand, however, there aren’t any strong candidates for such a measure in existence at this point (you can check the <a href="https://plato.stanford.edu/entries/causation-counterfactual/">previous link</a> for a couple of proposals). Even if the actual measure has not yet been found, it could still be the case that similarity of some kind is the concept underlying causal inference. As it is, I don’t know how to formalise causal relationships starting with similarity and trying to do so isn’t the path I chose.</p>
+
+<p>In the two examples I gave - putting chili in bolognese and switching vaccines for placebos - notice that the difference between the two worlds involves someone <em>taking an action</em> in both cases. The counterfactual theory of causality as I’ve introduced it does not require for the difference between the two worlds to have been established by someone making a decision, but someone taking an action ended up in both the stories anyway. An alternative theory of causality makes this <em>taking of actions</em> the fundamental ingredient of causal relationships, and this is what I will introduce in <a href="/causality/03_interventions">chapter 3</a>.</p>
 
 
       <footer class="site-footer">
