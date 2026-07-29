@@ -1,6 +1,7 @@
 ---
 layout: default
 title:  "Seeing and Doing"
+permalink: /causality/
 date:   2020-07-08
 ---
 
@@ -15,4 +16,4 @@ People have been trying for a long time to explain how it is that we learn causa
  4. [Forget about effects, think about consequences](/causality/05_consequences)
  5. [From doing to seeing and doing](/causality/06_see_do)
  6. [Regularity is almost all you need](/causality/07_regularity)
- 7. [Where are the causes in *Causal Statistical Decision Theory*?](/08_defining_causes)
+ 7. [Where are the causes in *Causal Statistical Decision Theory*?](/causality/08_defining_causes)
